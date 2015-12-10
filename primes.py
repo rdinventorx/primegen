@@ -1,8 +1,9 @@
 from __future__ import division
 inputnum = int(raw_input('How many primes would you like? '))
 
-primes = list()
-
+filename = raw_input('What should be the name of this file? ')
+with open(filename, 'w') as text_file:
+	
 dividend = 2
 primessolved = 0
 while primessolved != inputnum:
@@ -16,11 +17,11 @@ while primessolved != inputnum:
 		if checksum == 0:
 			isprime = 0
 	if isprime == 1:
-		print str(primessolved + 1) + ' = ' + str(dividend)
+		with open(filename, 'a') as text_file
+			text_file.write(dividend)
 		primessolved = primessolved + 1
 	dividend = dividend + 1
-	
-		
+
 		
 	
 	
